@@ -1,0 +1,8 @@
+1. Choose your game folder.
+2. City Studio > Atmosphere: select a preset, name your setup, Save draft.
+3. Custom additions: New addition > write directions > Save addition. Enable/disable/delete as needed.
+4. My V / appearance: write or load visible details, Save description (optional).
+5. Preview changes > Install files / prompts with the game closed.
+6. Share My Setup > Export setup. Send only that .ncnsetup.json file. Player description is excluded by default.
+7. Recipient: Import setup > review draft > Preview > Install. Use their own models and accounts.
+8. History > Restore as draft recovers earlier instructions, not past NPC memories.

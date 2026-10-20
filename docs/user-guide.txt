@@ -1,0 +1,74 @@
+﻿NightCityNet Helper by PalcherBTW - preview 0.9
+Support / subscribe: https://www.youtube.com/@Palcher1715
+
+START HERE
+1. Install NightCityNet normally. This helper is for the CET nightcitynet mod, not AI NPC LLM Companions.
+2. Download model weights separately. Place GGUF files in Models/LLM; llama-server.exe and its matching DLLs in Models/LLM Runtime; ggml-small.bin in Models/Whisper. You can also select existing files.
+3. Choose the Cyberpunk root folder. Select a model profile, then Start model and Connect to mod. Keep the helper open during play. Close the game before changing mod files or switching models.
+4. In Language and prompts choose the desired language and style. Preview changes, then Install files / prompts. Voice services and accounts stay configured in NightCityNet.
+
+MODELS
+2B: https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/tree/main
+4B: https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/main
+Download the single Q4_K_M.gguf file: 2B is about 1.28 GB; 4B about 2.74 GB. Models need extra RAM/VRAM for context; the game also uses VRAM.
+Runtime: https://github.com/ggml-org/llama.cpp/releases
+Whisper: https://huggingface.co/ggerganov/whisper.cpp/tree/main
+Whisper recognizes your microphone; it does not generate voices. .en models recognize English only. ggml-small.bin is multilingual.
+Auto model selection uses 4B for Contextual profanity and Clean dialogue, and for non-English languages. Other English styles use 2B. Existing custom models remain supported. Explicit 2B/4B selections override Auto. Changing language/style while a helper-owned model is running switches it in Auto when needed. Otherwise press Start model after selecting the profile. The default 12-layer offload saves VRAM; choose GPU layers to suit your available memory.
+
+STYLES AND RESET
+Moderate profanity: normal characters, situational swearing, no automatic hostility toward a polite greeting; developed replies when useful.
+Extreme profanity - everyone swears: frequent varied strong swearing for all adult NPCs, with distinct personalities and context-sensitive reactions. English uses natural strong English profanity. This does not require unprovoked insults or combat.
+UA/RU chaos: explicit optional parody preset, separate from ordinary roleplay.
+Restore original style: removes ONLY the helper profanity section. The original mod or a user's custom profile may still contain profanity.
+Clean dialogue: explicitly asks for no profanity in the selected language. Use 4B for more consistent instruction following. This is a prompt, not a guaranteed output filter; small models can ignore it or echo a player's words.
+Keep current language/style does not reset it. Use the explicit Remove/Restore choices to remove helper sections. Changing languages replaces the helper language section, never stacks another copy. Character profiles, relationships, World State and memory are preserved. Pre-existing personalized story or aggressive character instructions are not deleted.
+Reply length is controlled in NightCityNet. There is no reply-length selector in this helper. Existing reply-length rules are not changed by the reply-ending slider.
+
+MOUTH ANIMATION
+English always keeps native NightCityNet/Boneware facial animation: no helper jaw override, even with the manual fallback choice.
+Automatic fallback is enabled only for Ukrainian / combined UA-RU, the languages previously tested without native lip sync. Other languages keep native animation by default; choose Fallback for this non-English language only if needed. Native animation only removes the helper block.
+Fallback is approximate jaw movement, not phoneme-accurate lip sync. It preserves the original CET event callbacks and disables its own animation if it fails. Native facial quality depends on the installed mod, voice backend, timestamps and rig; verify visually in game.
+
+BACKUPS
+Make Memory Backup stores dated backups next to the helper. Save Cyberpunk savegames separately. Config/API keys/models/voice caches are excluded from memory backups. Private installation transaction backups may contain prior settings and keys: never publish them.
+
+GITHUB / PUBLIC RELEASE
+This package contains source, prompts, compatibility assets and the executable. It contains no models, runtime binaries, personal config, memory, world state, character profiles, game saves or API keys. Upload this public folder, not the personalized working folder. Empty model folders are kept in the ZIP with placeholder files. Source/build.ps1 rebuilds the executable using the Windows .NET Framework compiler.
+Third-party models and runtime retain their own licenses. Lexicon source notes are in Prompts/Джерело.
+
+DIALOGUE ENDINGS - NEW IN 0.7
+Use the three-position slider in Dialogue endings: Never / Naturally (sometimes) / Always. Natural is the default: questions are used only when the character actually wants an answer, and a statement or observation is a valid ending. Always requests one relevant final spoken question; Never requests a statement ending. This is a model preference, not an enforced output filter.
+Preview changes, then Install files / prompts with the game closed. Apply reply-ending preference can be unchecked to leave the existing setting unchanged. Restore original endings removes only the helper ENDINGS section; other original/custom instructions remain in place.
+The preference is stored in marked helper sections, replacing previous helper ending instructions rather than stacking them. Legacy helper text requiring a question, taunt or challenge is softened inside its own marked sections only. Reply length, character profiles, world state and voice settings are not modified by this feature.
+
+CITY STUDIO - NEW IN 0.9
+Choose City Studio, then use its Atmosphere, Custom additions, My V / appearance, Share My Setup and History tabs.
+
+ATMOSPHERE
+One active base atmosphere: Original, Vanilla+, Dark Noir, Street Comedy, Friendly or Paranoid Night City. Save draft stores your choice in this helper; it does not edit the game. You can add your own named directions on top of the base atmosphere. Enabled directions have a total context limit to avoid overwhelming the model.
+Original atmosphere removes only the base preset, retaining custom additions. Disable all additions turns them off. Restore original city setup clears the helper atmosphere, additions and helper player description; other helper language/profanity/ending choices remain separate.
+
+CUSTOM ADDITIONS AND HISTORY
+Click New addition, enter a name and text, then Save addition. Select a saved addition to edit, enable/disable or delete it. Save draft records other edits. Every save creates a dated local history snapshot; imports save the previous draft first. History can view earlier setups and restore one as a new draft.
+Changes are drafts until Preview changes > Install files / prompts with the game closed. Disabling/deleting rebuilds only the helper CITY prompt section on installation. It does not erase conversations/events already remembered by NPCs. Memory Backup is separate from setup history.
+Local drafts and history are stored in Setup Library beside the helper, separately for each game folder. Save before switching game folders. Keep this folder if moving/reinstalling the helper; export a setup for moving to a different PC or game path. Setup history can contain personal authored text and should not be published.
+
+MY V / APPEARANCE
+Write a visible description or load a plain .txt file, then save it. You can export the description alone as .txt. Enable/disable or remove it independently. Apply with Install files / prompts.
+This is a player-authored dialogue hint, not a character editor. The body, clothing, game save, native player description and World State are not overwritten. The prompt is guarded for NPCs who are with V; they must also be able to actually see the detail. Live game evidence takes precedence. It does not reveal hidden thoughts, gender or history beyond explicit descriptions and observations. Remove deletes only the helper PLAYER_LOOK section on installation.
+
+SHARE MY SETUP
+Export creates a small .ncnsetup.json containing only the chosen helper atmosphere, named additions, language/profanity/ending preferences. Keep-current choices mean the recipient's existing preferences may remain unchanged; this is not a complete export of every NightCityNet setting.
+Player appearance is excluded by default; explicitly check Include my player description if wanted. Review your authored text before sharing.
+Import accepts only the documented declarative JSON format/version and allowed fields, validates sizes/types and loads a draft. It does not execute scripts, extract archives, download models or immediately modify game files. Imported player appearance is ignored by default so the recipient keeps their own V; explicitly enable replacement if desired.
+Review the imported draft and preferences, then Preview and Install. Models, runtime files, API keys, cloud accounts, paths, character memory, game saves and setup history are not collected into the shared file. The recipient still needs their own compatible mod/models/services.
+Ready-to-import examples are in Shared Setups: Street Comedy, Everyone Swears, Friendly Clean City and Dark Noir. They are authored examples, not in-game-tested promises of model behavior.
+
+TECHNICAL FORMAT
+Format: palcher.ncnsetup; Version: 1. Allowed fields: Format, Version, Name, Atmosphere, Language, Profanity, Endings, PlayerDescription, PlayerEnabled, Additions. Each addition has Id, Name, Text, CreatedUtc, Enabled. Unknown fields/versions are rejected rather than copied into mod files.
+Profanity: 0 keep, 1 moderate, 2 extreme, 3 UA/RU chaos, 4 remove helper style, 5 clean. Endings: 0 keep, 1 natural, 2 always question, 3 never question. Empty Language keeps the recipient's language; reset removes the helper language section.
+Custom text is rendered as literal template content, not executable template syntax. The CITY and PLAYER_LOOK sections merge into existing templates via the same backup/transaction mechanism as the other helper features. Other mod fields and updated functionality are retained.
+
+BUILD STATUS
+0.9 compiled successfully. No automated tests, model probes, UI runs or in-game tests were run for these additions, as requested by the author. Previous 0.6 results do not validate the new features. A manual pilot is still needed before a public release. The author's live game files were not changed for this update.

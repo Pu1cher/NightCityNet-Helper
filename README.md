@@ -32,7 +32,7 @@ The helper changes selected fields and its own marked prompt sections. It preser
 On 64-bit Windows with the .NET Framework 4.x compiler installed, run:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scriptsuild.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build.ps1
 ```
 
 The runnable folder is created at `dist/NightCityNet-Helper`. No models are downloaded and no tests are run by this build script. The source includes development test code, but build success alone does not validate runtime behavior.

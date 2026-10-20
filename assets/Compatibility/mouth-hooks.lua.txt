@@ -1,0 +1,38 @@
+-- PALCHER_MOUTH_BEGIN
+local PalcherMouth = need('compat/PalcherMouth')
+local palcherMouthDisabled = false
+local function palcherMouthSafe(fn, ...)
+    if palcherMouthDisabled then return end
+    local ok, err = pcall(fn, ...)
+    if not ok then
+        palcherMouthDisabled = true
+        pcall(PalcherMouth.Forget)
+        print('[PalcherMouth] optional animation disabled: ' .. tostring(err))
+    end
+end
+local palcherOriginalDispatch = dispatchEvent
+dispatchEvent = function(ev)
+    palcherOriginalDispatch(ev)
+    if type(ev) ~= 'table' then return end
+    palcherMouthSafe(function()
+        if ev.type == 'speak' and not Call.IsTurn(ev.requestId) then
+            PalcherMouth.Start(ev, targetForTurn(ev))
+        elseif ev.type == 'audioDone' or ev.type == 'error' then
+            PalcherMouth.Stop(ev)
+        end
+    end)
+end
+-- CET stores one callback per event. Extend the existing loop's local function;
+-- do not register another onUpdate or onShutdown callback.
+local palcherOriginalRunUpdate = runUpdate
+runUpdate = function(dt)
+    local result = palcherOriginalRunUpdate(dt)
+    palcherMouthSafe(function()
+        if not Lifecycle.IsActive() then PalcherMouth.Forget(); return end
+        if Lifecycle.IsPaused() then return end
+        PalcherMouth.Tick(dt, NCN.ActiveSpeakers())
+    end)
+    return result
+end
+Lifecycle.OnDeactivate(function() palcherMouthSafe(PalcherMouth.Forget) end)
+-- PALCHER_MOUTH_END

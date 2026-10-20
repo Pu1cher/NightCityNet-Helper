@@ -1,0 +1,20 @@
+{
+  "Format": "palcher.ncnsetup",
+  "Version": 1,
+  "Name": "PalcherBTW Everyone Swears",
+  "Atmosphere": "street-comedy",
+  "Language": "en",
+  "Profanity": 2,
+  "Endings": 1,
+  "PlayerDescription": "",
+  "PlayerEnabled": false,
+  "Additions": [
+    {
+      "Id": "61613cd4855a4666990e8d64399844e6",
+      "Name": "PalcherBTW flavor",
+      "Text": "All adult residents use very strong, varied natural English swearing. Friendly people can swear warmly; insults toward V need a reason. Preserve differences between characters.",
+      "CreatedUtc": "2026-10-19T23:06:38.290878+00:00",
+      "Enabled": true
+    }
+  ]
+}

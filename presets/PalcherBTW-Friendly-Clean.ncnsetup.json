@@ -1,0 +1,20 @@
+{
+  "Format": "palcher.ncnsetup",
+  "Version": 1,
+  "Name": "PalcherBTW Friendly Clean City",
+  "Atmosphere": "friendly",
+  "Language": "en",
+  "Profanity": 5,
+  "Endings": 1,
+  "PlayerDescription": "",
+  "PlayerEnabled": false,
+  "Additions": [
+    {
+      "Id": "4ef880d25c1a408498cffab6f8ad8f59",
+      "Name": "PalcherBTW flavor",
+      "Text": "Use small acts of believable courtesy while keeping personal boundaries and established conflicts. No profanity.",
+      "CreatedUtc": "2026-10-19T23:06:38.291876+00:00",
+      "Enabled": true
+    }
+  ]
+}

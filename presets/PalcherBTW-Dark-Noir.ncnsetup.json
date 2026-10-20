@@ -1,0 +1,20 @@
+{
+  "Format": "palcher.ncnsetup",
+  "Version": 1,
+  "Name": "PalcherBTW Dark Noir",
+  "Atmosphere": "noir",
+  "Language": "en",
+  "Profanity": 1,
+  "Endings": 1,
+  "PlayerDescription": "",
+  "PlayerEnabled": false,
+  "Additions": [
+    {
+      "Id": "f796b15305854af6ba9d3f645997cf4d",
+      "Name": "PalcherBTW flavor",
+      "Text": "Let weary observations, guarded trust and dry humor color conversations. Stay grounded in actual Night City events; do not narrate imaginary weather or crimes.",
+      "CreatedUtc": "2026-10-19T23:06:38.291876+00:00",
+      "Enabled": true
+    }
+  ]
+}

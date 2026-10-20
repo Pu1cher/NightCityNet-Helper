@@ -1,0 +1,20 @@
+{
+  "Format": "palcher.ncnsetup",
+  "Version": 1,
+  "Name": "PalcherBTW Street Comedy",
+  "Atmosphere": "street-comedy",
+  "Language": "en",
+  "Profanity": 1,
+  "Endings": 1,
+  "PlayerDescription": "",
+  "PlayerEnabled": false,
+  "Additions": [
+    {
+      "Id": "4cc8ed4c5b9d4057bbc79d593d52b375",
+      "Name": "PalcherBTW flavor",
+      "Text": "Residents complain about believable small inconveniences and corporate absurdity, with distinct comic voices. Do not invent personal history or automatically attack a stranger.",
+      "CreatedUtc": "2026-10-19T23:06:38.290878+00:00",
+      "Enabled": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+/dist/
+/build/
+*.exe
+*.dll
+*.gguf
+*.bin
+*.onnx
+*.zip
+*.rar
+*.log
+settings.user.json
+Backups/
+Memory Backups/
+Setup Library/
+CLI-ERROR.txt
+*-private*
+.vs/
+.idea/

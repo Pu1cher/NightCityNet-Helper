@@ -1,0 +1,19 @@
+Night City Net NPC insult lexicons — archive manifest
+
+Entry counts:
+- lexicon_de.csv: 1508 data rows
+- lexicon_en.csv: 1508 data rows
+- lexicon_es-419.csv: 1508 data rows
+- lexicon_pt-BR.csv: 1508 data rows
+- lexicon_ru.csv: 1508 data rows
+
+SHA-256:
+- 00c29da4248d66bf69dd38ebbb12e240314537272a9a73cdc9ffbc5034d3c083  lexicon_de.csv
+- fdac51b804f0361f665dfacb6f20f9c2946f126794a2ad175a269890d2cd10b4  lexicon_en.csv
+- 33363a6a5a05fe30ee2ddd742262cdbabe95321fa7031899c03af049f60a40f9  lexicon_es-419.csv
+- 78fe85c5faf594047da62b229a00656b579d15260cd9cbe1546b6a006f2270bb  lexicon_pt-BR.csv
+- ac3ca4b6c11cb0a9009c5e3850bd8d5ab66889075c77e80738ca0c1f4d3df1f5  lexicon_ru.csv
+- 63e1359f07f43e8b594a2ef1c2201d41b0d6d488c8cd85b90d8910c3acc0af0f  MANIFEST.txt
+- 9f2e0520944d7355f4180f09f382e2bde80cbf8f57315658614026306ca141cc  README_UK.md
+- e7e3040d1862e067ecf62689cce15e3358a7c7c856d6c4945c2aeded212b81f2  SOURCE_NOTES.md
+- ee0de650e65cb7c53500cfe72faea8dc7b2cac38ba9c2bc4fe7e5bb66c2630af  WORK_IMPLEMENTATION_PROMPT_EN.txt
